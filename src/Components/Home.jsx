@@ -25,10 +25,10 @@ function AiringNow() {
   if (loading) return <div>Loading...</div>;
 
   return (<>
-    <h1 className="text-white font-semibold text-[26px] ml-[8%] mt-[2%]">Airing Now</h1>
+    <h1 className="text-white font-semibold md:text-[26px] text-[20px] ml-[5px] md:ml-[8%] mt-[2%]">Airing Now</h1>
   
     
-      <div className="anime-container flex flex-wrap ml-[6%]">
+      <div className="anime-container md:flex md:flex-wrap md:ml-[6%] flex flex-wrap">
         
          {animes.map((anime) => (
             <Card

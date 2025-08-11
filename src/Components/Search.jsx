@@ -22,15 +22,15 @@ function Search() {
   };
 
   return (
-    <div className="text-white p-4  ">
-      <h1 className="text-2xl font-bold mb-4 text-center">Search Anime</h1>
+    <div id="search"className="text-white ">
+      <h1 className="text-2xl font-bold mb-4 text-center mt-[10px]">Search Anime</h1>
       <div className="flex gap-2 mb-4 justify-center">
         <input
           type="text"
           placeholder="Search..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="p-2 text-white rounded w-[300px] bg-black"
+          className="p-2 text-white rounded md:w-[300px] w-[200px] bg-black"
         />
         <button onClick={handleSearch} className="bg-blue-500 px-4 py-2 rounded hover:bg-blue-600">
           Search
@@ -39,7 +39,7 @@ function Search() {
 
       {loading && <p>Loading...</p>}
 
-      <div className="flex flex-wrap gap-4">
+      <div className="md:flex md:flex-wrap md:ml-[6%] flex flex-wrap ml-[5px]">
         {results.map((anime) => (
           <Card
             key={anime.mal_id}

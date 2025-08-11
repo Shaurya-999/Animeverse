@@ -22,9 +22,9 @@ function Top() {
   if (loading) return <div>Loading...</div>;
 
   return (<>
-    <h1 className="text-white font-semibold text-[26px] ml-[8%] mt-[2%]">High Rated</h1>
+    <h1 className="text-white font-semibold md:text-[26px] text-[20px] ml-[8px] md:ml-[8%] mt-[2%]">High Rated</h1>
   
-    <div className="anime-container flex flex-wrap ml-[6%] " >
+    <div className="anime-container md:flex md:flex-wrap md:ml-[6%] flex flex-wrap" >
       {animes.map((anime) => (
         <Card key={anime.mal_id} poster={anime.images.jpg.image_url} title={anime.title} year={anime.status} type={anime.type}/>
       ))}

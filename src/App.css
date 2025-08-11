@@ -8,7 +8,8 @@ body{
   background: linear-gradient(to bottom, purple 0%, black 100%);
    background-repeat: no-repeat;
   margin: 0; /* to remove default margin */
-  height: 300vh;
+  height: 100%;
+  overflow-x: hidden;
 
 }
 
@@ -18,4 +19,14 @@ body{
 -webkit-box-orient: vertical;
 overflow: hidden;
 text-overflow: ellipsis;
+}
+
+#watch{
+  min-height: 800px;
+  max-height: 100%;
+}
+
+#search{
+  min-height: 800px;
+  max-height: 100%;
 }
