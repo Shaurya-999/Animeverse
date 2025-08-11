@@ -8,7 +8,7 @@ function Land(){
 
   return(
     <>
-    <div id="land" className="md:h-[100vw] h-[120vw]">
+    <div id="land" className="md:h-[100vw] h-[1200px]">
     <div>
      <h1 className="text-white text-[64px] font-bold text-center mt-[4%]">Welcome to AnimeVerse ⚡⚡</h1>
      <p className="text-white font-medium text-center mt-[0.5%] pl-[0.5%] pr-[0.5%]">Welcome to our Anime & Manga Explorer! Dive into detailed information about your favorite anime and manga series, discover top-rated titles, explore characters and staff, and stay updated with seasonal releases — all powered by the Jikan API, providing rich data directly from MyAnimeList without any hassle. Whether you're a casual viewer or a dedicated fan, this page helps you find and learn more about the anime and manga worlds you love.</p>
