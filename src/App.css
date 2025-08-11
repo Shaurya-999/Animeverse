@@ -22,11 +22,14 @@ text-overflow: ellipsis;
 }
 
 #watch{
-  min-height: 800px;
+  min-height: 300px;
   max-height: 100%;
 }
 
 #search{
-  min-height: 800px;
+  min-height: 300px;
   max-height: 100%;
+}
+#land{
+  height: 120vw;
 }

@@ -8,6 +8,7 @@ function Land(){
 
   return(
     <>
+    <div id="land">
     <div>
      <h1 className="text-white text-[64px] font-bold text-center mt-[4%]">Welcome to AnimeVerse ⚡⚡</h1>
      <p className="text-white font-medium text-center mt-[0.5%] pl-[0.5%] pr-[0.5%]">Welcome to our Anime & Manga Explorer! Dive into detailed information about your favorite anime and manga series, discover top-rated titles, explore characters and staff, and stay updated with seasonal releases — all powered by the Jikan API, providing rich data directly from MyAnimeList without any hassle. Whether you're a casual viewer or a dedicated fan, this page helps you find and learn more about the anime and manga worlds you love.</p>
@@ -31,6 +32,7 @@ function Land(){
         img3={"https://m.media-amazon.com/images/I/91NxYvUNf6L._UF1000,1000_QL80_.jpg"}
         img4={"https://upload.wikimedia.org/wikipedia/en/f/fe/Soul_Eater_manga_volume_1.jpg"}
         img5={"https://m.media-amazon.com/images/I/81gv-D-LqhL._UF1000,1000_QL80_.jpg"}/>
+      </div>
       </div>
       </div>
 
