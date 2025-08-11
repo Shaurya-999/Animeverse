@@ -22,7 +22,7 @@ function Search() {
   };
 
   return (
-    <div id="search"className="text-white ">
+    <div id="search"className="text-white h-[1200px]">
       <h1 className="text-2xl font-bold mb-4 text-center mt-[10px]">Search Anime</h1>
       <div className="flex gap-2 mb-4 justify-center">
         <input
