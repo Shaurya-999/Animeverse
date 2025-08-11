@@ -11,7 +11,7 @@ function Watchlist() {
   }, []);
 
   return (
-    <div id="watch" className="h-[1200px]">
+    <div id="watch" className="">
       <h1 className="text-white text-xl mb-4 ml-[4%] mt-[5%]">My Watchlist</h1>
       {bookmarks.length === 0 ? (
         <p className="text-gray-400 ml-[4%]">No bookmarked animes yet.</p>
