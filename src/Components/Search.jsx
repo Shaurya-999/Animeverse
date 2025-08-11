@@ -39,7 +39,7 @@ function Search() {
 
       {loading && <p>Loading...</p>}
 
-      <div className="md:flex md:flex-wrap md:ml-[6%] flex flex-wrap ml-[5px] md:gap-[10%] md:mt-[1.5%]">
+      <div className="md:flex md:flex-wrap md:ml-[6%] flex flex-wrap ml-[5px] md:gap-[10%] md:mt-[1.5%] gap-[2%]">
         {results.map((anime) => (
           <Card
             id={anime.mal_id}

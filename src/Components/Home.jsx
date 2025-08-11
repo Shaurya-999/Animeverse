@@ -28,7 +28,7 @@ function AiringNow() {
     <h1 className="text-white font-semibold md:text-[26px] text-[20px] ml-[5px] md:ml-[6%] mt-[2%]">Airing Now</h1>
   
     
-      <div className="anime-container md:flex md:flex-wrap md:ml-[6%] flex flex-wrap md:gap-[5%]">
+      <div className="anime-container md:flex md:flex-wrap md:ml-[6%] flex flex-wrap md:gap-[5%] gap-[2%]">
         
          {animes.map((anime) => (
             <Card

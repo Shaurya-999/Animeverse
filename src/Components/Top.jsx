@@ -33,7 +33,7 @@ function handleClick(){
   return (<>
     <h1 className="text-white font-semibold md:text-[26px] text-[20px] ml-[8px] md:ml-[6%] mt-[2%]">High Rated</h1>
   
-    <div className="anime-container md:flex md:flex-wrap md:ml-[6%] flex flex-wrap md:gap-[5%] md:mt-[1%]" >
+    <div className="anime-container md:flex md:flex-wrap md:ml-[6%] flex flex-wrap md:gap-[5%] gap-[2%] md:mt-[1%]" >
       {animes.map((anime) => (
         <Card id={anime.mal_id} poster={anime.images.jpg.image_url} title={anime.title} year={anime.status} type={anime.type} />
       ))}
