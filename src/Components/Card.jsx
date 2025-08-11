@@ -1,8 +1,9 @@
 import { CiBookmark} from "react-icons/ci";
 import { GoBookmarkFill } from "react-icons/go";
 import { useState,useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
-function Card({title,year,poster,type}){
+function Card({title,year,poster,type,handleClick,id}){
 const [isBookmarked, setIsBookmarked] = useState(false);
 const [showPopup, setShowPopup] = useState(false); 
 
@@ -34,7 +35,7 @@ const toggleBookmark = () => {
 
   
   return(
-  <div id="card" className="relative rounded-lg shadow-lg h-[310px] w-[160px] bg-black text-white m-[2%] hover:scale-105 transition-transform duration-300 hover:shadow-2xl transition-shadow duration-300 "> 
+  <NavLink  to={`/title/${id}`}><div id="card" className="relative rounded-lg shadow-lg h-[310px] w-[160px] bg-black text-white m-[2%] hover:scale-105 transition-transform duration-300 hover:shadow-2xl transition-shadow duration-300 " onClick={handleClick}> 
     
     <img src={poster} alt={`Poster of ${title}`} className="w-full h-[200px]  rounded-lg "/>
     <h2 id="title" className="text-[12.8px] font-bold  p-[5px] text-end text-pretty truncate break-words">{title}</h2>
@@ -57,6 +58,7 @@ const toggleBookmark = () => {
       )}
     
   </div>
+  </NavLink>
   )
 }
 export default Card

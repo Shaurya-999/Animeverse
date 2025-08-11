@@ -6,6 +6,10 @@ function Top() {
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = React.useState(1);
 
+  
+
+
+
   useEffect(() => {
     fetch(`https://api.jikan.moe/v4/anime?order_by=score&sort=desc&page=${currentPage}`)
       .then((res) => res.json())
@@ -18,15 +22,20 @@ function Top() {
         setLoading(false);
       });
   }, [currentPage]);
+function handleClick(){
+      
+  }
+
+
 
   if (loading) return <div>Loading...</div>;
 
   return (<>
-    <h1 className="text-white font-semibold md:text-[26px] text-[20px] ml-[8px] md:ml-[8%] mt-[2%]">High Rated</h1>
+    <h1 className="text-white font-semibold md:text-[26px] text-[20px] ml-[8px] md:ml-[6%] mt-[2%]">High Rated</h1>
   
-    <div className="anime-container md:flex md:flex-wrap md:ml-[6%] flex flex-wrap" >
+    <div className="anime-container md:flex md:flex-wrap md:ml-[6%] flex flex-wrap md:gap-[5%] md:mt-[1%]" >
       {animes.map((anime) => (
-        <Card key={anime.mal_id} poster={anime.images.jpg.image_url} title={anime.title} year={anime.status} type={anime.type}/>
+        <Card id={anime.mal_id} poster={anime.images.jpg.image_url} title={anime.title} year={anime.status} type={anime.type} />
       ))}
     </div>
     <div className="flex justify-center gap-x-[15px]">
