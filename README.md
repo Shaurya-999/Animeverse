@@ -1,12 +1,24 @@
-# React + Vite
+# 🎥 AnimeVerse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AnimeVerse is a React-based web application that lets you explore currently airing anime, discover high-rated shows, and search for your favorites.  
+It uses the **[Jikan API](https://jikan.moe/)** to fetch real-time anime data from MyAnimeList.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+- 📺 **Airing Now** – View the latest airing anime ranked by score.
+- 🔍 **Search Anime** – Quickly search anime by title.
+- 📊 **Pagination** – Browse through pages of anime results.
+- 🎨 **Responsive UI** – Styled with Tailwind CSS for a modern, mobile-friendly look.
+- 🖼 **Anime Cards** – Displays poster, title, type, and status for each anime.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+- **React.js** – Frontend framework
+- **Tailwind CSS** – Styling
+- **Jikan API** – Anime data source
+- **React Router** – Navigation
+
+---
+
