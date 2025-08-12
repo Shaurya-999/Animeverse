@@ -22,6 +22,7 @@ text-overflow: ellipsis;
 }
 
 
-#anime{
-  
+#char{
+background: linear-gradient(90deg, #000b1a, #00001a, #000000);
+   background-repeat: no-repeat;
 }
