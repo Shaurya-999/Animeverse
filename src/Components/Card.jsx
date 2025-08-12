@@ -35,7 +35,7 @@ const toggleBookmark = () => {
 
   
   return(
-  <NavLink  to={`/title/${id}`}><div id="card" className="relative rounded-lg shadow-lg h-[310px] w-[160px] bg-black text-white m-[2%] hover:scale-105 transition-transform duration-300 hover:shadow-2xl transition-shadow duration-300 " onClick={handleClick}> 
+  <NavLink  to={`/title/${id}`}><div id="card" className="relative rounded-lg shadow-lg h-[310px] w-[160px] bg-black text-white m-[2%] hover:scale-105 transition-transform duration-300 hover:shadow-2xl transition-shadow duration-300 border border-blue-400 border-[2px]" onClick={handleClick}> 
     
     <img src={poster} alt={`Poster of ${title}`} className="w-full h-[200px]  rounded-lg "/>
     <h2 id="title" className="text-[12.8px] font-bold  p-[5px] text-end text-pretty truncate break-words">{title}</h2>

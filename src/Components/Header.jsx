@@ -10,7 +10,7 @@ function Header(){
  <>
  <nav className="flex flex-row w-full h-[72px] bg-black md:gap-[50%] gap-[10px] sticky top-0 z-50 shadow-lg">
   <div className=" ">
-   <NavLink to="/"><h1 className="text-[#f6ca83] font-bold md:text-[35px]  md:mt-[8%] md:p-0 p-[7px] text-[15px] mt-[22%] flex">Animeverse</h1></NavLink>
+   <NavLink to="/"><h1 className="text-[#f6ca83] font-bold md:text-[35px]  md:mt-[5%] md:p-0 p-[7px] text-[15px] mt-[22%] md:p-[7px] flex">Animeverse</h1></NavLink>
   
    </div>
    <div className="">

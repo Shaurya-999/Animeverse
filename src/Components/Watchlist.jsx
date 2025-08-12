@@ -16,7 +16,7 @@ function Watchlist() {
       {bookmarks.length === 0 ? (
         <p className="text-gray-400 ml-[4%]">No bookmarked animes yet.</p>
       ) : (
-        <div className="flex flex-wrap ml-[2%] gap-[2%]">
+        <div className="flex flex-wrap ml-[2%] gap-[3%]">
           {bookmarks.map((anime) => (
             <Card
               key={anime.title}

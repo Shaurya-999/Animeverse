@@ -5,12 +5,14 @@ function AiringNow() {
   const [animes, setAnimes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = React.useState(1);
+  const [hasNextPage, setHasNextPage] = useState(true);
 
   useEffect(() => {
     fetch(`https://api.jikan.moe/v4/anime?status=airing&order_by=score&sort=desc&page=${currentPage}`)
       .then((res) => res.json())
       .then((data) => {
         setAnimes(data.data); // `data.data` contains the anime list
+        setHasNextPage(data.pagination.has_next_page);
         setLoading(false);
       })
       .catch((err) => {
@@ -25,10 +27,10 @@ function AiringNow() {
   if (loading) return <div>Loading...</div>;
 
   return (<>
-    <h1 className="text-white font-semibold md:text-[26px] text-[20px] ml-[5px] md:ml-[6%] mt-[2%]">Airing Now</h1>
+    <h1 className="text-white font-semibold md:text-[26px] text-[20px] ml-[4%] md:ml-[6%] mt-[2%] mb-[2%] md:mb-0">Airing Now</h1>
   
     
-      <div className="anime-container md:flex md:flex-wrap md:ml-[6%] flex flex-wrap md:gap-[5%] gap-[2%]">
+      <div className="anime-container md:flex md:flex-wrap md:ml-[6%] flex flex-wrap md:gap-[5%] gap-[3%] ml-[3%]">
         
          {animes.map((anime) => (
             <Card
@@ -56,6 +58,7 @@ function AiringNow() {
       <button
         onClick={() => setCurrentPage(prev => prev + 1)}
         className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        disabled={!hasNextPage}
       >
         Next
       </button>

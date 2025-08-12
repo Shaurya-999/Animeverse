@@ -5,6 +5,7 @@ function Top() {
   const [animes, setAnimes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = React.useState(1);
+  const [hasNextPage, setHasNextPage] = useState(true);
 
   
 
@@ -15,6 +16,7 @@ function Top() {
       .then((res) => res.json())
       .then((data) => {
         setAnimes(data.data); // `data.data` contains the anime list
+        setHasNextPage(data.pagination.has_next_page);
         setLoading(false);
       })
       .catch((err) => {
@@ -31,9 +33,9 @@ function handleClick(){
   if (loading) return <div>Loading...</div>;
 
   return (<>
-    <h1 className="text-white font-semibold md:text-[26px] text-[20px] ml-[8px] md:ml-[6%] mt-[2%]">High Rated</h1>
+    <h1 className="text-white font-semibold md:text-[26px] text-[20px] ml-[4%] md:ml-[6%] mt-[2%] mb-[2%] md:mb-0">High Rated</h1>
   
-    <div className="anime-container md:flex md:flex-wrap md:ml-[6%] flex flex-wrap md:gap-[5%] gap-[2%] md:mt-[1%]" >
+    <div className="anime-container md:flex md:flex-wrap md:ml-[6%] flex flex-wrap md:gap-[5%] gap-[3%] md:mt-[1%] ml-[3%]" >
       {animes.map((anime) => (
         <Card id={anime.mal_id} poster={anime.images.jpg.image_url} title={anime.title} year={anime.status} type={anime.type} />
       ))}
@@ -53,6 +55,7 @@ function handleClick(){
       <button
         onClick={() => setCurrentPage(prev => prev + 1)}
         className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        disabled={!hasNextPage}
       >
         Next
       </button>
