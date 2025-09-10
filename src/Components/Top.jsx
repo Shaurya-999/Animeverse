@@ -12,7 +12,7 @@ function Top() {
 
 
   useEffect(() => {
-    fetch(`https://api.jikan.moe/v4/anime?order_by=score&sort=desc&page=${currentPage}`)
+    fetch(`https://api.jikan.moe/v4/anime?order_by=score&sort=desc&page=${currentPage}&sfw=true`)
       .then((res) => res.json())
       .then((data) => {
         setAnimes(data.data); // `data.data` contains the anime list
