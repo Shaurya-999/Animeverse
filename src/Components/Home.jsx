@@ -11,7 +11,7 @@ function AiringNow() {
     fetch(`https://api.jikan.moe/v4/anime?status=airing&order_by=score&sort=desc&page=${currentPage}&sfw=true`)
       .then((res) => res.json())
       .then((data) => {
-        setAnimes(data.data); // `data.data` contains the anime list
+        setAnimes(data.data); 
         setHasNextPage(data.pagination.has_next_page);
         setLoading(false);
       })

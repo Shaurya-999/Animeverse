@@ -13,7 +13,7 @@ import Anime from './Components/Anime'
 
 
 function App() {
-   const [searchQuery, setSearchQuery] = useState("");
+  
 
 
   return (
